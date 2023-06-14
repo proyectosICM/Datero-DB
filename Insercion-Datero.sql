@@ -258,14 +258,14 @@ DELIMITER //
 CREATE PROCEDURE PARH
 (IN EST BOOLEAN)
 BEGIN
-	SELECT P.ID_PAR, P.NOM_PAR, D.ID_DIS, D.NOM_DIS, P.EST_PAR FROM PARADEROS P
+	SELECT P.ID_PAR, P.NOM_PAR, D.ID_DIS, D.NOM_DIS, P.LONGITUD, P.LATITUD, P.EST_PAR FROM PARADEROS P
     INNER JOIN DISTRITOS D
 	ON P.DIS_ID = D.ID_DIS
     WHERE P.EST_PAR = EST
     ORDER BY P.EST_PAR ASC;
 END //
-
-CALL PARH(0);
+SELECT * FROM PARADEROS;
+CALL PARH(1);
 --------------------------------------------------------
 -- Creacion de vistas --
 --------------------------------------------------------
