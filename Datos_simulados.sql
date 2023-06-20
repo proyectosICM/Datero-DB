@@ -1,3 +1,6 @@
+USE daterodb;
+
+-- select @@lower_case_table_names;
 --------------------------------------------------------
 -- EMPRESAS --
 CALL AGREGAR_EMPRESAS('SurfaceItn',1);
@@ -87,7 +90,7 @@ CALL AGREGAR_BUSES(1,'MERCEDES', 'B4C-523', 1, 4, 1);
 -- Insercion de datos en procedimientos alamcenados --
 
 
-CALL EMPEST(1);
+-- CALL EMPEST(1);
 --------------------------------------------------------
 -- CONSULTAS AVANZADAS --
 --------------------------------------------------------
@@ -108,14 +111,14 @@ CALL RUTASXEMPT(1);
 CALL RUTASXEMPH(1);
 CALL RUTASXEMPD(1);
 
-CALL DISH(0);
+CALL DISH(1);
 
 CALL ROLESXH(1);
 
 CALL PARH(1);
 
-CALL PARADEROXRUTA(3);
+CALL PARADEROXRUTA(1);
 
-CALL EMPRESASH(0);
+CALL EMPRESASH(1);
 
 
